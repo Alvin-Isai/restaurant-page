@@ -10,8 +10,7 @@ function mainContent() {
     container.appendChild(mainPage().section);
 
     return container;
-}
-
+};
 
 function menuContent() {
     const container = document.getElementById('content');
@@ -20,7 +19,7 @@ function menuContent() {
     container.appendChild(menu().section);
 
     return container;
-}
+};
 
 function photoContent() {
     const container = document.getElementById('content');
@@ -29,9 +28,35 @@ function photoContent() {
     container.appendChild(photo().rowDiv);
 
     return container;
-}
+};
 
+const switchTabs = (() => {
+    const mainButton = document.getElementById('main');
+    const menuButton = document.getElementById('menu');
+    const photoButton = document.getElementById('photo');
+    const container = document.getElementById('content');
 
-// document.body.appendChild(mainContent());
-// document.body.appendChild(menuContent());
-document.body.appendChild(photoContent())
+    document.body.appendChild(mainContent().container);
+    
+    menuButton.addEventListener('click', ()=> {
+        while(container.firstChild) {
+            container.removeChild(container.firstChild)
+        };
+
+        document.body.appendChild(menuContent());
+    });
+    mainButton.addEventListener('click', ()=> {
+        while(container.firstChild) {
+            container.removeChild(container.firstChild)
+        };
+
+        document.body.appendChild(mainContent());
+    });
+    photoButton.addEventListener('click', ()=> {
+        while(container.firstChild) {
+            container.removeChild(container.firstChild)
+        };
+
+        document.body.appendChild(photoContent());
+    });
+})();
