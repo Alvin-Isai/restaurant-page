@@ -1,16 +1,19 @@
-import mainPage from './mainPage';
+import mainPage from './homePage';
 import menu from './menu'
 import photo from './photo'
 
-function mainContent() {
+function homeContent() {
     const container = document.getElementById('content');
 
-    container.appendChild(mainPage().title);
-    container.appendChild(mainPage().figure);
-    container.appendChild(mainPage().section);
+    container.appendChild(mainPage().hero);
+    container.appendChild(mainPage().aboutContainer);
+    container.appendChild(mainPage().banner);
+    container.appendChild(mainPage().contact);
+    container.appendChild(mainPage().footer);
 
     return container;
 };
+
 
 function menuContent() {
     const container = document.getElementById('content');
@@ -31,12 +34,12 @@ function photoContent() {
 };
 
 const switchTabs = (() => {
-    const mainButton = document.getElementById('main');
+    const homeButton = document.getElementById('main');
     const menuButton = document.getElementById('menu');
     const photoButton = document.getElementById('photo');
     const container = document.getElementById('content');
 
-    document.body.appendChild(mainContent().container);
+    document.body.appendChild(homeContent());
     
     menuButton.addEventListener('click', ()=> {
         while(container.firstChild) {
@@ -45,12 +48,12 @@ const switchTabs = (() => {
 
         document.body.appendChild(menuContent());
     });
-    mainButton.addEventListener('click', ()=> {
+    homeButton.addEventListener('click', ()=> {
         while(container.firstChild) {
             container.removeChild(container.firstChild)
         };
 
-        document.body.appendChild(mainContent());
+        document.body.appendChild(homeContent());
     });
     photoButton.addEventListener('click', ()=> {
         while(container.firstChild) {
