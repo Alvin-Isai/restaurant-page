@@ -2,17 +2,19 @@ const menu = () => {
 
     // Section Title
     const header = document.createElement('header');
+    header.classList.add('header');
     const title = document.createElement('h1');
     title.innerHTML = 'The Menu';
     header.appendChild(title);
 
     const section = document.createElement('section');
+    section.classList.add('menu');
     
     // Appetizer section
     const appetizer = document.createElement('div');
-    appetizer.classList.add('appetizer');
+    appetizer.classList.add('app');
     const appTitle = document.createElement('h2');
-    appTitle.innerHTML = 'APPETIZER';
+    appTitle.innerHTML = 'Appetizers';
     appetizer.appendChild(appTitle);
 
     const appList = document.createElement('ul');
@@ -35,7 +37,7 @@ const menu = () => {
     const pasta = document.createElement('div');
     pasta.classList.add('pasta');
     const pastaTitle = document.createElement('h2');
-    pastaTitle.innerHTML = 'PASTA';
+    pastaTitle.innerHTML = 'Pasta';
     pasta.appendChild(pastaTitle);
 
     const pastaList = document.createElement('ul');
@@ -101,12 +103,20 @@ const menu = () => {
     wtcList.appendChild(wtclist4);
     wtcList.appendChild(wtclist5);
 
+    // Filler square
+    const filler = document.createElement('div')
+    filler.classList.add('filler')
+    const fillerTitle = document.createElement('h1')
+    fillerTitle.innerHTML = 'BEST <br> TASTE'
+    filler.appendChild(fillerTitle)
+    
+
     // Pizza section
 
     const pizza = document.createElement('div');
     pizza.classList.add('pizza');
     const pizzaTitle = document.createElement('h2');
-    pizzaTitle.innerHTML = 'PIZZA';
+    pizzaTitle.innerHTML = 'Pizza';
     pizza.appendChild(pizzaTitle);
 
     const pizzaList = document.createElement('ul');
@@ -134,7 +144,7 @@ const menu = () => {
     const burger = document.createElement('div');
     burger.classList.add('burger');
     const burgerTitle = document.createElement('h2');
-    burgerTitle.innerHTML = 'BURGER';
+    burgerTitle.innerHTML = 'Burger';
     burger.appendChild(burgerTitle);
 
     const burgerList = document.createElement('ul');
@@ -157,7 +167,7 @@ const menu = () => {
     const ice = document.createElement('div');
     ice.classList.add('icecream');
     const iceTitle = document.createElement('h2');
-    iceTitle.innerHTML = 'ICE CREAM';
+    iceTitle.innerHTML = 'Ice Cream';
     ice.appendChild(iceTitle);
 
     const iceList = document.createElement('ul');
@@ -179,7 +189,7 @@ const menu = () => {
     const drink = document.createElement('div');
     drink.classList.add('drink');
     const drinkTitle = document.createElement('h2');
-    drinkTitle.innerHTML = 'DRINKS';
+    drinkTitle.innerHTML = 'Drinks';
     drink.appendChild(drinkTitle);
 
     const drinkList = document.createElement('ul');
@@ -205,11 +215,12 @@ const menu = () => {
     drinkList.appendChild(drinklist5);
     drinkList.appendChild(drinklist6);
 
-    // adding all section to main
+    // adding all sections to main
     section.appendChild(appetizer);
     section.appendChild(pasta);
     section.appendChild(hours);
     section.appendChild(wtc);
+    section.appendChild(filler);
     section.appendChild(pizza);
     section.appendChild(burger);
     section.appendChild(ice);
