@@ -39,7 +39,7 @@ const switchTabs = (() => {
     const photoButton = document.getElementById('photo');
     const container = document.getElementById('content');
 
-    document.body.appendChild(homeContent());
+    document.body.appendChild(photoContent());
     
     menuButton.addEventListener('click', ()=> {
         while(container.firstChild) {
