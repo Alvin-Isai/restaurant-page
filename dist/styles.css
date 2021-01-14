@@ -500,6 +500,15 @@ body {
       flex-direction: column;
     }
 
+    /* menu */
+    .menu {
+      margin-top: 40px;
+      grid-gap: 10px;
+    }
+    .hours {
+      font-size: 13px;
+    }
+
     /* Photo page */
     .column {
       -ms-flex: 100%;
