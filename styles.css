@@ -1,5 +1,5 @@
 body {
-  background: url(/pics/pattern1.png);
+  background: url(/dist/pics/pattern1.png);
 }
 
 /* Nav */
@@ -61,7 +61,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background:url(/pics/mainpage.jpg);
+  background:url(/dist/pics/mainpage.jpg);
   width: 100%;
   height: 100vh;
   background-position: center;
@@ -151,7 +151,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:url(/pics/banner.jpeg);
+  background:url(/dist/pics/banner.jpeg);
   background-position: center;
 
 }
