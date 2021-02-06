@@ -31,7 +31,7 @@ const mainPage = () => {
     info.appendChild(paragraph);
 
     const image = document.createElement('img');
-    image.src = '../pics/photo8.jpg';
+    image.src = './photo8.jpg';
 
     about.appendChild(info);
     about.appendChild(image);
